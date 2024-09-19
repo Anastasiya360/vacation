@@ -3,6 +3,7 @@ package com.example.vacation.exception;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+
 @EqualsAndHashCode(callSuper = false)
 @Data
 public class ApiException extends RuntimeException {
@@ -20,5 +21,6 @@ public class ApiException extends RuntimeException {
                 "  \"message\": \"" + getMessage() + "\"\n" +
                 "}";
     }
+
 }
 

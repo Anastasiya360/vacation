@@ -1,9 +1,11 @@
-package com.example.vacation.controller;
+package com.example.vacation.controller.impl;
 
-import com.example.vacation.controller.impl.CalculationVacationController;
+import com.example.vacation.controller.CalculationVacationController;
 import com.example.vacation.service.CalculationVacationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 @RequiredArgsConstructor
@@ -14,5 +16,10 @@ public class CalculationVacationControllerImpl implements CalculationVacationCon
     @Override
     public Integer calculationOfVacationPay(Integer averageSalary, Integer vacationDays) {
         return calculationVacationService.calculationOfVacationPay(averageSalary, vacationDays);
+    }
+
+    @Override
+    public Long calculationOfVacationPayDate(Integer averageSalary, LocalDate start, LocalDate end) {
+        return calculationVacationService.calculationOfVacationPayDate(averageSalary, start, end);
     }
 }
