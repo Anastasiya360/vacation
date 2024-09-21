@@ -72,7 +72,7 @@ public class CalculationVacationServiceImpl implements CalculationVacationServic
      * @return Дни для расчета отпускных
      */
     private Integer calculateWorkdays(LocalDate start, LocalDate end) {
-        Integer days = 0;
+        Integer days = 1;
         List<LocalDate> holidays = holidaysDate(start.getYear());
         while (start.isBefore(end)) {
             if (!holidays.contains(start)) {
