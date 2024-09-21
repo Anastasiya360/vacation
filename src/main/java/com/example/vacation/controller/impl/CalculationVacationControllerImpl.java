@@ -19,7 +19,7 @@ public class CalculationVacationControllerImpl implements CalculationVacationCon
     }
 
     @Override
-    public Long calculationOfVacationPayDate(Integer averageSalary, LocalDate start, LocalDate end) {
+    public Integer calculationOfVacationPayDate(Integer averageSalary, LocalDate start, LocalDate end) {
         return calculationVacationService.calculationOfVacationPayDate(averageSalary, start, end);
     }
 }
